@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Segmentation Dashboard</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            margin:0;
+            padding:20px;
+        }
+
+        h1{
+            text-align:center;
+        }
+
+        .cards{
+            display:flex;
+            gap:20px;
+            justify-content:center;
+            margin-top:30px;
+            flex-wrap: wrap;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            width:250px;
+            text-align:center;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .insight{
+            background:white;
+            margin-top:30px;
+            padding:20px;
+            border-radius:10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Segmentation Dashboard</h1>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Customers</h3>
+            <p style="font-size: 24px; color: #2196F3;">{{ total_customers }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Average Income</h3>
+            <p style="font-size: 24px; color: #4CAF50;">${{ avg_income }}k</p>
+        </div>
+
+        <div class="card">
+            <h3>Average Spending</h3>
+            <p style="font-size: 24px; color: #FF9800;">{{ avg_spending }}</p>
+        </div>
+    </div>
+
+    <div class="insight">
+        <h2>Management Insights</h2>
+        <ul>
+            <li>Premium customers generate the highest revenue.</li>
+            <li>Potential customers can be converted through targeted marketing.</li>
+            <li>Regular customers provide stable income.</li>
+            <li>Discount campaigns work best for budget customers.</li>
+        </ul>
+    </div>
+</body>
+</html>
